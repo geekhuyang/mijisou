@@ -24,8 +24,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ['gruntfile.js', 'js/searx_src/*.js'],
       options: {
-        reporterOutput: "",	    
-        // options here to override JSHint defaults
+        reporterOutput: "",
         globals: {
           jQuery: true,
           console: true,
@@ -38,7 +37,6 @@ module.exports = function(grunt) {
         development: {
             options: {
                 paths: ["less/logicodev"]
-                //banner: '/*! less/oscar/oscar.css | <%= grunt.template.today("dd-mm-yyyy") %> | https://github.com/asciimoo/searx */\n'
             },
             files: {
                     "css/logicodev.min.css": "less/logicodev/oscar.less",
@@ -54,16 +52,6 @@ module.exports = function(grunt) {
                     "css/logicodev.min.css": "less/logicodev/oscar.less",
                     }
         },
-        /*
-	// built with ./manage.sh styles
-        bootstrap: {
-            options: {
-                paths: ["less/bootstrap"],
-                cleancss: true
-            },
-            files: {"css/bootstrap.min.css": "less/bootstrap/bootstrap.less"}
-        },
-        */
     },
     watch: {
         scripts: {
