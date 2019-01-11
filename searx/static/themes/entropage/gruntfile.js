@@ -34,15 +34,15 @@ module.exports = function(grunt) {
       }
     },
     less: {
-        development: {
+        "pc-development": {
             options: {
-                paths: ["less/logicodev"]
+              paths: ["less/logicodev"]
             },
             files: {
-                    "css/logicodev.min.css": "less/logicodev/oscar.less",
-                    }
+              "css/logicodev.min.css": "less/logicodev/oscar.less",
+            }
         },
-        production: {
+        "pc-production": {
             options: {
                 paths: ["less/logicodev"],
                 //banner: '/*! less/oscar/oscar.css | <%= grunt.template.today("dd-mm-yyyy") %> | https://github.com/asciimoo/searx */\n',
@@ -52,15 +52,37 @@ module.exports = function(grunt) {
                     "css/logicodev.min.css": "less/logicodev/oscar.less",
                     }
         },
+        "m-development": {
+          options: {
+            paths: ["less/m-logicodev"]
+          },
+          files: {
+            "css/m-logicodev.min.css": "less/m-logicodev/oscar.less",
+          }
+        },
+        "m-production": {
+            options: {
+                paths: ["less/m-logicodev"],
+                //banner: '/*! less/oscar/oscar.css | <%= grunt.template.today("dd-mm-yyyy") %> | https://github.com/asciimoo/searx */\n',
+                cleancss: true
+            },
+            files: {
+              "css/m-logicodev.min.css": "less/m-logicodev/oscar.less",
+            }
+        },
     },
     watch: {
         scripts: {
             files: ['<%= jshint.files %>'],
             tasks: ['jshint', 'concat', 'uglify']
         },
-        oscar_styles: {
-            files: ['less/logicodev/**/*.less'],
-            tasks: ['less:development', 'less:production']
+        pc_styles: {
+          files: ['less/logicodev/**/*.less'],
+          tasks: ['less:pc-development', 'less:pc-production']
+        },
+        mobile_styles: {
+          files: ['less/m-logicodev/**/*.less'],
+          tasks: ['less:m-development', 'less:m-production']
         },
         bootstrap_styles: {
             files: ['less/bootstrap/**/*.less'],
