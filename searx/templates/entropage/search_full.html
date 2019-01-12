@@ -62,15 +62,16 @@
     </div>
 
     <div class="container">
-        {% block footer %}
-        {% endblock %}
-        <p class="text-muted">
+        <div class="text-muted">
+            <div class="qrcode">
+                <img src="{{ url_for('static', filename='img/' + _('qrcode.png')) }}" />
+            </div>
             <small>
                 {{ _('Powered by') }} <a href="https://github.com/entropage/searx/">searx</a> - {{ _('a privacy-respecting, hackable metasearch engine') }}<br/>
                 <a href="{{ url_for('about') }}#policy">{{ _('Privacy Policy') }}</a> |
                 <a href="{{ url_for('about') }}#agreemt">{{ _('Terms of Service') }}</a><br/>
                 {{ _('京ICP备18016546号 京公网安备11010502036987号') }}
             </small>
-        </p>
+        </div>
     </div>
 </div>

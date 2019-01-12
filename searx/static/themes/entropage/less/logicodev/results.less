@@ -119,19 +119,12 @@
 
 .result-fit(@w) {
     width: @w;
-
-    @media (max-width: 1080px) {
-        width: auto;
-    }
-
-    @media (max-width: @ipad) {
-        width: auto;
-    }
 }
 
 .default-container,
 .code-container,
 .videos-container,
+.images-container,
 .map-container {
     clear: both;
     padding: 2px 4px;
@@ -241,15 +234,15 @@
 }
 
 #sidebar_results {
-    @media (min-width: 1300px) {
+    /* @media (min-width: 1300px) {
         width: 300px;
-    }
+    } */
 }
 
 #main_results {
-    @media (min-width: 1300px) {
+    /* @media (min-width: 1300px) {
         width: 800px;
-    }
+    } */
 }
 
 // page forward, backward
@@ -280,6 +273,25 @@
 .label-default {
     color: @gray;
     background: transparent;
+}
+
+.footer .text-muted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .qrcode {
+        width: 100px;
+        margin-right: 20px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    small {
+        word-wrap: break-word;
+    }
 }
 
 .result .text-muted small {

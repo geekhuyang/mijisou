@@ -18,16 +18,10 @@
 .search-page {
     background: #F4F4F4;
     padding: 0 @p;
-    @media (max-width: @ipad) {
-        padding: 0;
-    }
 }
 
 .result-container {
     padding: 0 @p;
-    @media (max-width: @ipad) {
-        padding: 0;
-    }
 }
 
 .search_form {
@@ -109,23 +103,9 @@
     margin-top: 164px;
     margin-bottom: 25px;
 
-    @media(max-width: @ipad) {
-        margin-top: 10px;
-    }
-
     & > img {
-        // width: 150px;
-
-        @media(min-width: @iphone5) and (max-width: @ipad) {
-            height: 110px;
-        }
-
-        @media(min-width: @ipad) {
-            height: auto;
-            width: 150px;
-        }
-        // width: 150px;
-
+        height: auto;
+        width: 150px;
     }
 }
 
@@ -143,9 +123,6 @@
     padding-right: 150px;
     box-sizing: border-box;
 
-    // &:hover, &:focus {
-    //     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.20), 0 0px 0px 1px rgba(0, 0, 0, 0.08);
-    // }
 }
 
 #q::-webkit-input-placeholder {
@@ -155,57 +132,18 @@
 #search_form .search-container {
     position: relative;
 
-    /* &.full {
-        @media(max-width: @pc) {
-            width: 100%;
-        }
-    } */
-
+    width: 640px;
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: @iphone5) {
-        width: 100%;
-    }
-
-    @media (min-width: @ipad) {
-        width: 80%;
-    }
-
-    @media (min-width: @pc) {
-        width: 640px;
-    }
-
     &.nofull {
-        width: 100%;
+        // width: 100%;
+        width: 630px;
         padding-left: 0;
-
-        @media (min-width: @pc) {
-            width: 630px;
-            margin-left: 0;
-        }
-
-        @media (min-width: @ipad) and (max-width: @pc){
-            padding-left: 10%;
-        }
-        @media (min-width: @iphone5) and (max-width: @ipad) {
-            padding-left: 15%;
-        }
+        margin-left: 0;
 
         .search-margin {
             padding-left: 11px;
-        }
-
-        @media (min-width: 900px) {
-            .search-margin {
-                padding-left: 15px;
-            }
-        }
-
-        @media (min-width: @ipad) {
-            .search-margin {
-                padding-left: 12px;
-            }
         }
 
         .input-group-btn {
@@ -240,9 +178,7 @@
 }
 
 #search_form .input-group-btn {
-    @media (min-width: @ipad) {
-        // width: 100%;
-    }
+    
     width: 65px;
     // width: auto;
     position: absolute;
@@ -278,18 +214,10 @@
 }
 
 #search_form .logo-container {
-    margin-left: -4%;
+    // margin-left: -4%;
+    margin-left: -40px;
     padding-right: 10px;
     float: left;
-
-    @media (max-width: @pc) {
-        margin-left: -4%;
-    }
-
-    @media (min-width: @iphone5) and (max-width: @pc) {
-        // display: none;
-        margin-left: 4%;
-    }
 
     & > div {
         position: relative;
@@ -302,10 +230,6 @@
         top :0;
         z-index: 100;
         left: -4%;
-
-        @media (min-width: 1300px) {
-            left: 15px;
-        }
     }
 
     & img {
